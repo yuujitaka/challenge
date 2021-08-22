@@ -16,10 +16,11 @@ const Home = () => {
   //TODO: Virtualized list e loading
   return (
     <Container maxWidth="xl">
-      <Grid container spacing={3} xs>
+      <Typography variant="h4">Popular</Typography>
+      <Grid container spacing={3}>
         {data?.results?.map((result) => (
-          <Grid item xs={6} md={3} lg={2}>
-            <MovieCard key={result.id} movie={result} />
+          <Grid item xs={6} md={3} lg={2} key={result.id}>
+            <MovieCard movie={result} />
           </Grid>
         ))}
       </Grid>

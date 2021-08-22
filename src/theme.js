@@ -10,6 +10,9 @@ const theme = createTheme({
       main: "#90cea1",
     },
   },
+  typography: {
+    fontFamily: ["inherit"],
+  },
 });
 
 export default theme;

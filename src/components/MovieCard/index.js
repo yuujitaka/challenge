@@ -1,18 +1,22 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import StarIcon from "@material-ui/icons/Star";
 
-import { CardContentStyled, Rating } from "./styles";
+import CardContentStyled from "./styles";
+import Rating from "../Rating";
 
-const MovieCard = ({ movie: { title, poster_path, vote_average } }) => {
+const MovieCard = ({
+  movie: { id, title, poster_path, vote_average },
+  history,
+}) => {
   return (
     //TODO: Cards do mesmo tamanho
     <Card>
-      <CardActionArea>
+      <CardActionArea onClick={() => history.push(`/movie/${id}`)}>
         <CardMedia
           component="img"
           //TODO: URL dinâmica
@@ -21,14 +25,11 @@ const MovieCard = ({ movie: { title, poster_path, vote_average } }) => {
         />
         <CardContentStyled>
           <Typography>{title}</Typography>
-          <Rating>
-            <StarIcon fontSize="small" />
-            {vote_average}
-          </Rating>
+          <Rating>{vote_average}</Rating>
         </CardContentStyled>
       </CardActionArea>
     </Card>
   );
 };
 
-export default MovieCard;
+export default withRouter(MovieCard);
