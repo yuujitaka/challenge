@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Pagination from "@material-ui/lab/Pagination";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
 
 const Home = () => {
   const [page, setPage] = useState(1);
@@ -16,7 +17,10 @@ const Home = () => {
   //TODO: Virtualized list e loading
   return (
     <Container maxWidth="xl">
-      <Typography variant="h4">Popular</Typography>
+      <Box my={4}>
+        <Typography variant="h4">Popular</Typography>
+      </Box>
+
       <Grid container spacing={3}>
         {data?.results?.map((result) => (
           <Grid item xs={6} md={3} lg={2} key={result.id}>
