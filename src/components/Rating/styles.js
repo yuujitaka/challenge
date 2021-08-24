@@ -3,7 +3,7 @@ import styled from "styled-components";
 const RatingStyled = styled("div")`
   display: inline-flex;
   align-items: center;
-  background-color: #f9a825;
+  background-color: #ff9e00;
   border-radius: 4px;
   padding: 0 3px;
   color: white;
