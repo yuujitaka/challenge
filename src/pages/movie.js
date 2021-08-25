@@ -12,7 +12,6 @@ const Movie = () => {
   const { id } = useParams();
   const { data } = useGetMovie(id);
   const release = new Date(data?.release_date).getFullYear();
-  console.log(data);
   //TODO: loading
   return (
     <>
