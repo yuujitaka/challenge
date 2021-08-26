@@ -11,11 +11,9 @@ const MovieCard = ({
   history,
 }) => {
   return (
-    //TODO: Cards do mesmo tamanho
     <CardStyled>
       <CardActionArea onClick={() => history.push(`/movie/${id}`)}>
         <CardMediaStyled
-          // component="img"
           //TODO: URL dinâmica
           image={`https://image.tmdb.org/t/p/w500/${poster_path}`}
           title={title}
