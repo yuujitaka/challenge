@@ -2,7 +2,7 @@ import styled from "styled-components";
 import TextField from "@material-ui/core/TextField";
 
 const SearchInput = styled(TextField)`
-  width: 280px;
+  width: 250px;
   .MuiInputBase-input {
     color: white;
   }

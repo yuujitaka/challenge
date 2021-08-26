@@ -31,11 +31,13 @@ const Home = () => {
             </Grid>
           ))}
         </Grid>
-        <Pagination
-          count={data?.total_pages}
-          page={page}
-          onChange={handleChange}
-        />
+        <Box my={4} display="flex" justifyContent="center">
+          <Pagination
+            count={data?.total_pages}
+            page={page}
+            onChange={handleChange}
+          />
+        </Box>
       </Container>
     </>
   );

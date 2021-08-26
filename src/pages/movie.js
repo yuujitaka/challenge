@@ -56,7 +56,7 @@ const Movie = () => {
             </Container>
           </Banner>
           <Container>
-            <Box mt={4}>
+            <Box my={4}>
               <Typography variant="h6">Sinopse</Typography>
               <Typography>{data?.overview}</Typography>
             </Box>

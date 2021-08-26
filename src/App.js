@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import theme from "./theme";
 import Routes from "./routes";
 import TopBar from "./components/TopBar";
+import Footer from "./components/Footer";
 
 function App() {
   const queryClient = new QueryClient();
@@ -14,6 +15,7 @@ function App() {
         <BrowserRouter>
           <TopBar />
           <Routes />
+          <Footer />
         </BrowserRouter>
       </ThemeProvider>
     </QueryClientProvider>

@@ -6,7 +6,6 @@ const BannerStyled = styled("section")`
       url});
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
   width: 100%;
   background-position: center;
   color: white;
