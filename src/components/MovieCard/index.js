@@ -1,11 +1,9 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
-import CardContentStyled from "./styles";
+import { CardStyled, CardMediaStyled, CardContentStyled } from "./styles";
 import Rating from "../Rating";
 
 const MovieCard = ({
@@ -14,10 +12,10 @@ const MovieCard = ({
 }) => {
   return (
     //TODO: Cards do mesmo tamanho
-    <Card>
+    <CardStyled>
       <CardActionArea onClick={() => history.push(`/movie/${id}`)}>
-        <CardMedia
-          component="img"
+        <CardMediaStyled
+          // component="img"
           //TODO: URL dinâmica
           image={`https://image.tmdb.org/t/p/w500/${poster_path}`}
           title={title}
@@ -27,7 +25,7 @@ const MovieCard = ({
           <Rating>{vote_average}</Rating>
         </CardContentStyled>
       </CardActionArea>
-    </Card>
+    </CardStyled>
   );
 };
 
