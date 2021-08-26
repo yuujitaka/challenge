@@ -11,7 +11,7 @@ const MovieCard = ({
   history,
 }) => {
   return (
-    <CardStyled>
+    <CardStyled data-testid="movie">
       <CardActionArea onClick={() => history.push(`/movie/${id}`)}>
         <CardMediaStyled
           //TODO: URL dinâmica
