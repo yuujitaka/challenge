@@ -14,7 +14,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
         <BrowserRouter>
-          <HashRouter basename="/challenge">
+          <HashRouter basename="/">
             <TopBar />
             <Routes />
             <Footer />
